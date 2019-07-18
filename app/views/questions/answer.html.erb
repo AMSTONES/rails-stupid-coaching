@@ -1,2 +1,12 @@
-<h1>Questions#answer</h1>
-<p><%= @answer %></p>
+
+<div class="container">
+  <div class="qa">
+  <h2>Your Question: </h2><p><%= @question%></p>
+</div>
+<div class="qa">
+  <h2>Coach's answer: </h2><p><%= @answer %></p>
+</div>
+<%= link_to 'Ask another question?', ask_path %>
+</div>
+
+

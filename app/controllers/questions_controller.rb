@@ -3,12 +3,13 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    query = params['question']
+    query = params['answer-given']
+    @question = query
     @answer =
       case query
       when 'I am going to work'
         'Great'
-      when '????'
+      when /\?/
         'Silly question, get dressed and go to work'
       else
         "I don't care, get dressed and go to work!"
